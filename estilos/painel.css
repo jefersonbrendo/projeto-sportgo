@@ -1,177 +1,236 @@
 /* painel.css */
 body, html{
-    margin: 0;
-    font-family: 'Courier New', monospace;
-    background: linear-gradient(180deg, #013833, #021a1a);
-    color: white;
-  }
-  
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  background: linear-gradient(180deg, #013833, #021a1a);
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 80px 1fr 300px;
+  gap: 20px;
+  padding: 20px;
+  height: 95vh;
+}
+
+.perfil-lateral {
+  grid-row: span 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid teal;
+}
+
+.painel, .classificacao {
+  background-color: #012c2c;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid teal;
+}
+
+.painel {
+  grid-column: 2 / 3;
+}
+
+.classificacao {
+  grid-column: 3 / 4;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid teal;
+  padding-bottom: 5px;
+}
+
+.tabela-atletas, .classificacao table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-atletas th, .tabela-atletas td,
+.classificacao th, .classificacao td {
+  text-align: left;
+  padding: 5px 8px;
+}
+
+.tabela-atletas img {
+  width: 16px;
+  vertical-align: middle;
+}
+
+.editar {
+  color: #f1c40f;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.noticia {
+  grid-column: 1 / 4;
+  background-color: #011d1d;
+  border: 1px solid teal;
+  margin-top: 20px;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.noticia h3 {
+  font-size: 14px;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.noticia p {
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+
+
+/* Perfil card modal */
+.perfil-card {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #012c2c;
+  border: 1px solid teal;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  color: white;
+  z-index: 1000;
+  box-shadow: 0 0 10px teal;
+  display: none; /* fica oculto inicialmente */
+  font-family: 'Courier New', monospace;
+}
+
+.perfil-card .lado-esquerdo {
+  background-color: #013833;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.perfil-card .nome {
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;
+}
+
+.perfil-card .numero, .perfil-card .turma {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.perfil-card .lado-direito .linha {
+  margin-bottom: 10px;
+}
+
+.perfil-card label {
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.perfil-card .valor {
+  font-size: 14px;
+  margin: 0;
+}
+
+.perfil-card .linha.dupla > div {
+  display: inline-block;
+  width: 48%;
+}
+
+.perfil-card .linha.tripla > div {
+  display: inline-block;
+  width: 30%;
+}
+
+.perfil-card .fechar-btn {
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid teal;
+  border-radius: 5px;
+  color: teal;
+  padding: 5px 10px;
+  font-weight: bold;
+  float: right;
+  transition: background-color 0.3s ease;
+}
+
+.perfil-card .fechar-btn:hover {
+  background-color: teal;
+  color: #012c2c;
+}
+
+@media (max-width: 1024px) {
   .container {
-    display: grid;
-    grid-template-columns: 80px 1fr 300px;
-    gap: 20px;
-    padding: 20px;
-    height: 95vh;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    height: auto;
   }
-  
-  .perfil-lateral {
-    grid-row: span 2;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-  }
-  
-  .avatar {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 2px solid teal;
-  }
-  
+
   .painel, .classificacao {
-    background-color: #012c2c;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid teal;
+    grid-column: 1 / 2;
+    margin-bottom: 20px;
   }
-  
-  .painel {
-    grid-column: 2 / 3;
+
+  .noticia {
+    grid-column: 1 / 2;
   }
-  
-  .classificacao {
-    grid-column: 3 / 4;
-  }
-  
-  h2 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid teal;
-    padding-bottom: 5px;
-  }
-  
-  .tabela-atletas, .classificacao table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
+
   .tabela-atletas th, .tabela-atletas td,
   .classificacao th, .classificacao td {
-    text-align: left;
-    padding: 5px 8px;
+    font-size: 14px;
+    padding: 6px;
   }
-  
+
   .tabela-atletas img {
-    width: 16px;
-    vertical-align: middle;
+    width: 14px;
   }
-  
-  .editar {
-    color: #f1c40f;
-    margin-left: 8px;
-    cursor: pointer;
+
+  .perfil-card {
+    width: 90%;
   }
-  
-  .noticia {
-    grid-column: 1 / 4;
-    background-color: #011d1d;
-    border: 1px solid teal;
-    margin-top: 20px;
-    border-radius: 10px;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    font-size: 16px;
+  }
+
+  .tabela-atletas th, .tabela-atletas td,
+  .classificacao th, .classificacao td {
+    font-size: 12px;
+    padding: 5px 4px;
+  }
+
+  .painel, .classificacao {
     padding: 15px;
   }
-  
-  .noticia h3 {
-    font-size: 14px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-  }
-  
-  .noticia p {
-    font-size: 13px;
-    line-height: 1.4;
+
+  .tabela-atletas img {
+    width: 12px;
   }
 
-
-
-  /* Perfil card modal */
-.perfil-card {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #012c2c;
-    border: 1px solid teal;
-    border-radius: 10px;
-    padding: 20px;
-    width: 350px;
-    color: white;
-    z-index: 1000;
-    box-shadow: 0 0 10px teal;
-    display: none; /* fica oculto inicialmente */
-    font-family: 'Courier New', monospace;
-  }
-  
-  .perfil-card .lado-esquerdo {
-    background-color: #013833;
+  .perfil-card {
     padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    text-align: center;
   }
-  
-  .perfil-card .nome {
-    font-weight: bold;
-    font-size: 20px;
-    margin: 0;
+
+  a {
+    font-size: 14px !important;
+    padding: 6px 12px !important;
   }
-  
-  .perfil-card .numero, .perfil-card .turma {
-    margin: 5px 0 0;
-    font-size: 14px;
-  }
-  
-  .perfil-card .lado-direito .linha {
-    margin-bottom: 10px;
-  }
-  
-  .perfil-card label {
-    font-weight: bold;
-    font-size: 14px;
-    display: block;
-    margin-bottom: 3px;
-  }
-  
-  .perfil-card .valor {
-    font-size: 14px;
-    margin: 0;
-  }
-  
-  .perfil-card .linha.dupla > div {
-    display: inline-block;
-    width: 48%;
-  }
-  
-  .perfil-card .linha.tripla > div {
-    display: inline-block;
-    width: 30%;
-  }
-  
-  .perfil-card .fechar-btn {
-    cursor: pointer;
-    background: transparent;
-    border: 1px solid teal;
-    border-radius: 5px;
-    color: teal;
-    padding: 5px 10px;
-    font-weight: bold;
-    float: right;
-    transition: background-color 0.3s ease;
-  }
-  
-  .perfil-card .fechar-btn:hover {
-    background-color: teal;
-    color: #012c2c;
-  }
-  
-  
+}
+
