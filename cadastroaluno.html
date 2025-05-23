@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - Interclasse</title>
+  <link rel="stylesheet" href="estilos/stylecadastro.css" />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body id="pagina-cadastro">
+  <div class="container">
+    <div class="left-box">
+      <img src="assets/Logo Effects 3.png" alt="Logo Interclasse" class="logo" />
+      <h2>Seja Bem-vindo!</h2>
+      <p>faça o cadastro para continuar</p>
+      <a href="loginalunoadm.html" class="login-btn">Fazer Login</a>
+    </div>
+    <div class="right-box">
+      <h1>Cadastre-se</h1>
+      <p class="divider">Cadastre-se usando seu email</p>
+      <form id="form-cadastro">
+        <input type="text" name="nome" placeholder="Nome" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="password" name="senha" placeholder="Senha" required />
+        <button type="submit" class="submit-btn">Cadastrar</button>
+      </form>      
+    </div>
+  </div>
+
+  <script src="scripts/cadastro.js"></script>
+</body>
+</html>

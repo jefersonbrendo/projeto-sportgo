@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Mono', monospace;
+    background: radial-gradient(circle at top, #0f4e3e, #0a0f0d);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .form-container {
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    border-radius: 50%;
+    background: #222;
+    box-shadow: 0 0 10px #00ffcc;
+  }
+  
+  .form-box {
+    background: rgba(10, 20, 20, 0.9);
+    padding: 40px 30px;
+    border-radius: 15px;
+    border: 1px solid #2b8c76;
+    box-shadow: 0 0 15px rgba(0, 255, 170, 0.08);
+  }
+  
+  .header {
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    color: #ccc;
+    border-bottom: 1px solid #2b8c76;
+    padding-bottom: 5px;
+  }
+  
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .input-group label {
+    margin-bottom: 5px;
+    color: #aaa;
+  }
+  
+  .input-group input,
+  .input-group select {
+    padding: 10px;
+    background: #101f1d;
+    border: 1px solid #2b8c76;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  
+  .confirm-btn {
+    margin-top: 25px;
+    padding: 12px 25px;
+    align-self: center;
+    background: #00ccaa;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 255, 170, 0.3);
+  }
+  
+  .confirm-btn:hover {
+    background: #00ffcc;
+  }
+  

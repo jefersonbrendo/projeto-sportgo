@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Painel do Admin</title>
+  <link rel="stylesheet" href="estilos/painel.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body id="painel-admin">
+  <div class="container">
+  
+  <div style="grid-column: 1 / 4; margin-bottom: 10px;">
+  <a href="index.html" style="
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: teal;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    border: 1px solid white;
+    transition: background-color 0.3s ease;
+  " onmouseover="this.style.backgroundColor='#0a7f7f'" onmouseout="this.style.backgroundColor='teal'">
+    ⬅ Voltar para Home
+  </a>
+</div>
+
+
+    <div class="painel">
+      <h2>Gerenciar Atletas (Admin)</h2>
+      <table class="tabela-atletas">
+        <thead>
+          <tr>
+            <th>Atleta</th>
+            <th><img src="assets/GOLS.png" alt="Gols"/></th>
+            <th><img src="assets/chuteira (1) 1.svg" alt="Assistências" /></th>
+            <th><img src="assets/mdi_soccer-field.png" alt="Jogos"/></th>
+            <th><img src="assets/Rectangle 25.svg" alt="Cartões Amarelos"/></th>
+            <th><img src="assets/Rectangle 26.svg" alt="Cartões Vermelhos"/></th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="lista-atletas">
+          <!-- Atletas adicionados via JavaScript -->
+        </tbody>
+      </table>
+    </div>
+
+    <div class="classificacao">
+      <h2>Classificação</h2>
+      <table>
+        <thead>
+          <tr><th>Clubes</th><th>Pts</th></tr>
+        </thead>
+        <tbody id="tabela-classificacao">
+          <tr><td>Redes de computadores I</td><td contenteditable="true">0</td></tr>
+          <tr><td>Redes de computadores II</td><td contenteditable="true">0</td></tr>
+          <tr><td>Redes de computadores III</td><td contenteditable="true">0</td></tr>
+          <tr><td>Enfermagem I</td><td contenteditable="true">0</td></tr>
+          <tr><td>Enfermagem II</td><td contenteditable="true">0</td></tr>
+          <tr><td>Enfermagem III</td><td contenteditable="true">0</td></tr>
+          <tr><td>Administração I</td><td contenteditable="true">0</td></tr>
+          <tr><td>Administração II</td><td contenteditable="true">0</td></tr>
+          <tr><td>Administração III</td><td contenteditable="true">0</td></tr>
+          <tr><td>Hospedagem I</td><td contenteditable="true">0</td></tr>
+          <tr><td>Hospedagem II</td><td contenteditable="true">0</td></tr>
+          <tr><td>Hospedagem III</td><td contenteditable="true">0</td></tr>
+        </tbody>
+      </table>
+      <button id="salvar-classificacao">Salvar Informações</button>
+    </div>
+  </div>
+
+  <script src="scripts/admin.js"></script>
+</body>
+</html>

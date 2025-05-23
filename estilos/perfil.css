@@ -1,0 +1,83 @@
+/* perfil.css */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(180deg, #013833, #011c1c);
+    color: white;
+  }
+  
+  .container {
+    display: flex;
+    height: 100vh;
+    padding: 40px;
+    box-sizing: border-box;
+    gap: 40px;
+  }
+  
+  .lado-esquerdo {
+    width: 300px;
+    background-color: #022322;
+    border-radius: 20px;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .info-principal {
+    text-align: center;
+    line-height: 1.8;
+  }
+  
+  .info-principal .nome {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .info-principal .numero,
+  .info-principal .turma {
+    font-size: 16px;
+  }
+  
+  .lado-direito {
+    flex: 1;
+    background-color: #011c1c;
+    border: 1px solid #00d0af;
+    border-radius: 16px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .linha {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .dupla {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .tripla {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .linha label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #00d0af;
+  }
+  
+  .valor {
+    background-color: transparent;
+    border: 1px solid #00d0af;
+    border-radius: 8px;
+    padding: 10px;
+    color: white;
+    font-family: inherit;
+  }
+  

@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Mono', monospace;
+    background: radial-gradient(circle at top, #0f4e3e, #0a0f0d);
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+  
+  .logo img {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card {
+    background: rgba(20, 40, 35, 0.9);
+    padding: 40px 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #2b8c76;
+    box-shadow: 0 0 10px rgba(0, 255, 170, 0.1);
+  }
+  
+  .check-icon {
+    font-size: 80px;
+    color: #00cc44;
+    margin-bottom: 20px;
+  }
+  
+  .text {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+  }
+  
+  .confirm-button {
+    padding: 10px 30px;
+    background: #00ccaa;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: 0.3s ease;
+  }
+  
+  .confirm-button:hover {
+    background: #00ffcc;
+  }
+  
+  .social-icons {
+    margin-top: 30px;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icons a img:hover {
+    transform: scale(1.2);
+  }
+  

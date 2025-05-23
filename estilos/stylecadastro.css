@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+    background: radial-gradient(#0a1917, #050a09);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    display: flex;
+    background: #11332e;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    max-width: 960px;
+    width: 100%;
+  }
+  
+  .left-box {
+    background: #134139;
+    padding: 40px 30px;
+    width: 40%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-right: 1px solid #246e5e;
+  }
+  
+  .left-box .logo {
+    width: 140px;
+    margin: 0 auto 30px;
+  }
+  
+  .left-box h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .left-box p {
+    font-size: 14px;
+    margin-bottom: 30px;
+    color: #ccc;
+  }
+  
+  .login-btn {
+    padding: 10px 30px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+  }
+  
+  .login-btn:hover {
+    background: #00ffc2;
+    color: #000;
+    border-color: #00ffc2;
+  }
+  
+  .right-box {
+    padding: 40px 30px;
+    width: 60%;
+  }
+  
+  .right-box h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .social-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .social-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #1e2c2b;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .social-buttons button:hover {
+    background-color: #00ffc2;
+    color: #000;
+  }
+  
+  .divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #aaa;
+    font-size: 13px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #3b5e57;
+    background: #0d1c1b;
+    color: #fff;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    margin-bottom: 20px;
+    color: #ccc;
+  }
+  
+  .options a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .options a:hover {
+    text-decoration: underline;
+    color: #00ffc2;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    background-color: #00ffc2;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #00ddb0;
+  }
+  
+  /* Responsivo */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .left-box, .right-box {
+      width: 100%;
+      border-right: none;
+    }
+  
+    .left-box {
+      border-bottom: 1px solid #246e5e;
+    }
+
+    .google {
+        margin: 10px;
+    }
+  }
+  
+  

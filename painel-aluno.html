@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel do Aluno</title>
+    <link rel="stylesheet" href="estilos/painel.css" />
+  </head>
+  <body>
+    <div class="container">
+
+      <div style="grid-column: 1 / 4; margin-bottom: 10px;">
+        <a href="index.html" style="
+          display: inline-block;
+          padding: 8px 16px;
+          background-color: teal;
+          color: white;
+          text-decoration: none;
+          border-radius: 5px;
+          font-weight: bold;
+          font-family: 'Courier New', monospace;
+          border: 1px solid white;
+          transition: background-color 0.3s ease;
+        " onmouseover="this.style.backgroundColor='#0a7f7f'" onmouseout="this.style.backgroundColor='teal'">
+          ⬅ Voltar para Home
+        </a>
+      </div>
+
+      <!-- Melhores Atletas -->
+      <div class="painel">
+        <h2>Melhores Atletas</h2>
+        <table class="tabela-atletas">
+          <thead>
+            <tr>
+              <th>Atletas</th>
+              <th><img src="assets/GOLS.png" alt="Gols" /></th>
+              <th>
+                <img src="assets/chuteira (1) 1.svg" alt="Assistencias" />
+              </th>
+              <th><img src="assets/mdi_soccer-field.png" alt="Jogos" /></th>
+              <th>
+                <img src="assets/Rectangle 25.svg" alt="Cartões amarelo" />
+              </th>
+              <th>
+                <img src="assets/Rectangle 26.svg" alt="Cartões vermelho" />
+              </th>
+            </tr>
+          </thead>
+          <tbody id="lista-atletas-aluno"></tbody>
+        </table>
+      </div>
+
+      <!-- Classificação -->
+      <div class="classificacao">
+        <h2>Classificação</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Clubes</th>
+              <th>Pts</th>
+            </tr>
+          </thead>
+          <tbody id="tabela-classificacao-aluno"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Card de Perfil do Atleta -->
+    <div id="perfilCard" class="perfil-card" style="display: none">
+      <button class="fechar-btn" onclick="fecharPerfil()">X</button>
+      <div class="lado-esquerdo">
+        <p class="nome" id="card-nome-curto"></p>
+        <p class="numero" id="card-numero"></p>
+        <p class="turma" id="card-turma"></p>
+      </div>
+      <div class="lado-direito">
+        <div class="linha">
+          <label>Nome Completo:</label>
+          <p class="valor" id="card-nome-completo"></p>
+        </div>
+        <div class="linha">
+          <label>Nome Uniforme:</label>
+          <p class="valor" id="card-uniforme"></p>
+        </div>
+        <div class="linha">
+          <label>Camisa:</label>
+          <p class="valor" id="card-camisa"></p>
+        </div>
+        <div class="linha">
+          <label>Melhor Pé:</label>
+          <p class="valor" id="card-pe"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dentro do <script>... -->
+    <script src="scripts/painelaluno.js"></script>
+      
+  </body>
+</html>
